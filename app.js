@@ -29,7 +29,7 @@ const contactSchema = new mongoose.Schema({
 // making Tokens
 contactSchema.methods.generateAuthToken =async function(){
 	try{
-	const token=jwt.sign({_id:this._id.toString},"welcometoourwebstieandsignuptoregisterthankyou");
+	const token=jwt.sign({_id:this._id.toString},process. envy. secretkey);
 	this.tokens=this.tokens.concat({token:token})
 	await this.save();
 	 return token;
