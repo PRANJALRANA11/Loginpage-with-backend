@@ -1,0 +1,28 @@
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Signup
+        style
+            include ../static/login/login.css
+    body
+        nav#navbar.top
+            ul      
+                li TOUR INDIA
+        div.head 
+            h1 WELCOME TO TOUR INDIA         
+            p WELCOME TO YOUR NO. 1 TOUR BOOKING SITE PLEASE SIGN UP TO CONTINUE
+        div.page
+            h2 SIGN UP
+            form(action="/signup" , method="POST") 
+                input(type="text" class ="myinput" name="name" placeholder="ENTER YOUR NAME") 
+                input(type="number" class ="myinput" name="phone" placeholder="ENTER YOUR PHONE NO.") 
+                input(type="email" class ="myinput" name="emailaddress" placeholder="ENTER YOUR EMAIL ADDRESS") 
+                input(type="password" class ="myinput" name="Password" placeholder="SET YOUR PASSWORD") 
+                input(type="password" class ="myinput" name="Confirmpassword" placeholder="CONFIRM PASSWORD") 
+                button.btn 
+                    |Login
+                p  already have an account  #[a.anch(href ='/login') Login]    

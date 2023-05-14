@@ -1,0 +1,19 @@
+extends base.pug
+block style 
+    style 
+        include ../static/login/login.css
+block content
+    nav#navbar.top
+        ul      
+            li TOUR INDIA
+    div.head 
+        h1 WELCOME TO TOUR INDIA         
+        p WELCOME TO YOUR NO. 1 TOUR BOOKING SITE PLEASE LOGIN TO CONTINUE
+    div.page
+        h2 LOG IN
+        form(action="/login" , method="POST") 
+            input(type="text" class ="myinput" name="emailaddress" placeholder="ENTER YOUR EMAIL") 
+            input(type="password" class ="myinput" name="password" placeholder="ENTER YOUR PASSWORD") 
+            button.btn 
+                   |Login
+            p  don't  have an account  #[a.anch(href ='/signup') Sign up]            
